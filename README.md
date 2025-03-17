@@ -17,3 +17,20 @@ Aby uruchomić aplikację, musisz mieć zainstalowanego Pythona 3 oraz bibliotek
 
 ```bash
 pip install pygame
+```
+## Struktura Projektu
+```bash
+pyinterview-coding-challenges/
+│
+├── main.py              # Główny plik uruchamiający aplikację
+├── utils.py         # Funkcje pomocnicze do obsługi przycisków i rysowania
+│
+├── functions/           # Folder zawierający wszystkie funkcje aplikacji
+│   ├── hello_world.py   # Funkcja wyświetlająca "Hello World"
+│   ├── factorial.py     # Funkcja obliczająca silnię
+│   ├── reverse_string.py # Funkcja odwracająca tekst
+│   ├── max_number.py    # Funkcja znajdująca największą liczbę z 5
+│   └── exit_program.py  # Funkcja kończąca działanie programu
+│
+└── README.md            # Dokumentacja projektu
+```
