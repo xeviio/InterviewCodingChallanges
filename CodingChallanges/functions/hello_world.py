@@ -2,16 +2,18 @@ import pygame
 import sys
 from utils import draw_text, draw_back_button, check_button_click
 
+WIDTH=800
+
 def option_hello_world(screen, font):
     """Wyświetla okno z napisem 'Hello, World!' oraz przyciskiem powrotu."""
     while True:
         screen.fill((30, 30, 30))  # Tło ekranu
         
         # Tworzenie napisu "Hello, World!" na środku ekranu
-        draw_text(screen, "Hello, World!", font, 150)
+        draw_text(screen, "Hello, World!", font,WIDTH,150)
 
         # Wywołanie funkcji do rysowania przycisku "Wróć"
-        button_rect = draw_back_button(screen, font)
+        button_rect = draw_back_button(screen, font, WIDTH)
 
         pygame.display.flip()  # Aktualizacja ekranu
 
