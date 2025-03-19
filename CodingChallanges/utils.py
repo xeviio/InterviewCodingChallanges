@@ -1,7 +1,8 @@
 import pygame
 
+
 # Funkcja rysująca tekst na ekranie
-def draw_text(screen, text, font, y_position, color=(255, 255, 255)):
+def draw_text(screen, text, font, WIDTH, y_position, color=(255, 255, 255)):
     """
     Funkcja rysująca tekst na ekranie w zadanej pozycji.
     
@@ -9,17 +10,20 @@ def draw_text(screen, text, font, y_position, color=(255, 255, 255)):
     - screen: ekran gry (pygame.Surface)
     - text: tekst do wyświetlenia (str)
     - font: czcionka (pygame.font.Font)
+    - WIDTH: szerokość ekranu do obliczenia pozycji X
     - y_position: pozycja Y dla tekstu
     - color: kolor tekstu w formacie RGB (domyślnie biały)
     """
+    x_position = WIDTH // 2  # Środek ekranu
     text_surface = font.render(text, True, color)  # Renderowanie tekstu
-    text_rect = text_surface.get_rect(center=(250, y_position))  # Ustawienie pozycji
+    text_rect = text_surface.get_rect(center=(x_position, y_position))  # Ustawienie pozycji
     screen.blit(text_surface, text_rect)  # Rysowanie tekstu na ekranie
 
 # Funkcja rysująca przycisk 'Wróć' oraz zwracająca jego prostokąt
-def draw_back_button(screen, font):
+def draw_back_button(screen, font, WIDTH):
     """Rysuje przycisk 'Wróć' na ekranie i zwraca jego prostokąt."""
-    button_rect = pygame.Rect(200, 320, 100, 40)  # Współrzędne przycisku
+    button_x = WIDTH // 2 - 50  # Centrowanie przycisku
+    button_rect = pygame.Rect(button_x, 320, 100, 40)  # Współrzędne przycisku
     pygame.draw.rect(screen, (50, 150, 250), button_rect)  # Rysowanie niebieskiego prostokąta
     
     button_text = font.render("Wróć", True, (255, 255, 255))  # Tekst przycisku
