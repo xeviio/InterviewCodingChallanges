@@ -2,6 +2,8 @@ import pygame
 import sys
 from utils import draw_text, draw_back_button, handle_input, check_button_click
 
+WIDTH=800
+
 def option_factorial(screen, font):
     """Wyświetla okno do obliczania silni z podanej liczby oraz przycisk powrotu."""
     input_active = True
@@ -11,10 +13,10 @@ def option_factorial(screen, font):
         screen.fill((30, 30, 30))  # Tło ekranu
         
         # Tworzenie napisu i prośby o wprowadzenie liczby
-        draw_text(screen, "Podaj liczbę (max 20):", font, 100)
+        draw_text(screen, "Podaj liczbę (max 20):", font,WIDTH,100)
         
         # Wyświetlanie wpisanego tekstu
-        draw_text(screen, user_text, font, 150)
+        draw_text(screen, user_text, font,WIDTH, 150)
 
         # Obsługa silni
         if user_text.isdigit():
@@ -28,10 +30,10 @@ def option_factorial(screen, font):
                 result_text = f"{fact}"
         
         # Wyświetlanie wyniku
-        draw_text(screen, result_text, font, 200,(144, 238, 144))
+        draw_text(screen, result_text, font,WIDTH, 200,(144, 238, 144))
 
         # Wywołanie funkcji do rysowania przycisku "Wróć"
-        button_rect = draw_back_button(screen, font)
+        button_rect = draw_back_button(screen, font, WIDTH)
 
         pygame.display.flip()  # Aktualizacja ekranu
 
