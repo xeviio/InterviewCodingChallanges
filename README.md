@@ -7,7 +7,9 @@ PyInterview to aplikacja stworzona w Pythonie, której celem jest przygotowanie 
 - **Silnia** – Umożliwia obliczenie silni z liczby (max 20).
 - **Odwracanie tekstu** – Odwraca wprowadzony tekst w czasie rzeczywistym.
 - **Największa liczba** – Wprowadź 5 liczb i otrzymaj największą z nich.
+- **Quick sort** – Algorytm sortujący sposobem Quick sort losowo wygenerowanego ciągu liczb.
 - **Powrót do menu** – Możliwość powrotu do głównego menu aplikacji.
+
 
 ## Wymagania
 - Python 3.x
